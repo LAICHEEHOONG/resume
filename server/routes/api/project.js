@@ -12,11 +12,11 @@ router.route('/')
 
             await newUrls.save();
 
-            res.status(200).send(`Url updated`);
+            res.status(200).send(`${urls.project_name} saved.`);
 
         } catch (error) {
             console.log(error);
-            res.json({ warning: 'Url updated error', error });
+            res.json({ warning: 'Url save error', error });
         }
     })
 

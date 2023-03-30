@@ -9,7 +9,10 @@ const mongoUri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${
 const language = require('./routes/api/language');
 const candidate = require('./routes/api/candidate');
 const skill = require('./routes/api/skill');
-const url = require('./routes/api/project')
+const url = require('./routes/api/project');
+const course = require('./routes/api/course');
+const education = require('./routes/api/education');
+const employment = require('./routes/api/employment');
 
 mongoose.connect(mongoUri);
 
@@ -21,6 +24,9 @@ app.use('/api/language', language);
 app.use('/api/candidate', candidate);
 app.use('/api/skill', skill);
 app.use('/api/url', url);
+app.use('/api/course', course);
+app.use('/api/education', education);
+app.use('/api/employment', employment);
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
