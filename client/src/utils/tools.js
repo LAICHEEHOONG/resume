@@ -14,7 +14,8 @@ export const resumePreprocess = (data) => {
             website: data.candidate[0].candidate.website,
             github: data.candidate[0].candidate.github,
             language: data.language,
-            skill: data.skill
+            skill: data.skill,
+            project: data.project
         }
     }
     return obj;
@@ -76,4 +77,12 @@ export const skillIcon = {
     visual_studio_code_icon: require('../icon/visual_studio_code_icon.png'),
     webpack_icon: require('../icon/webpack_icon.png'),
     bootstrap_icon: require('../icon/bootstrap_icon.jpeg')
+}
+
+export const truncateString = (str, maxLength) => {
+    if (str.length > maxLength) {
+        return str.substring(0, maxLength - 3) + '...';
+      } else {
+        return str;
+      }
 }

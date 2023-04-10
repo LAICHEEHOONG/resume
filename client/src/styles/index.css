@@ -33,3 +33,22 @@ code {
   height: 166px;
   /* min-height: 166px; */
 }
+
+.project_line {
+  border: none;
+  height: 2px;
+  background-color: #ce6464;
+  margin: 1px;
+}
+
+.gray-text {
+  color: #888;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.gray-text:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+}
+
+

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import ContactList from './contactList';
 import Language from './language';
 import Skill from './skill';
+import Project from './project';
 import { Grid } from '@mui/material';
 import { formatDate } from '../utils/tools';
 
@@ -28,7 +29,7 @@ const Infomation = () => {
                     <Skill />
                 </Grid>
                 <Grid item xs={9}>
-                    Personal web project
+                    <Project />
                 </Grid>
             </Grid>
         </div>
