@@ -22,5 +22,20 @@ router.route('/')
             res.json({ warning: 'candidate updated error', error });
         }
     })
+    .put(async (req, res) => {
+        try {
+            const job = req.body.job;
+            const updateJob = await CandidateChinese.findOneAndUpdate(
+                { 'candidate.name': '赖志宏' },
+                { $set: { "candidate.job": job } },
+                { new: true }
+            );
+
+            res.json(updateJob);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: 'Update job chinese error' });
+        }
+    })
 
 module.exports = router;

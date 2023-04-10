@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.lai_image {
+  height: 190px;
+  border-radius: 10px;
+}
+
+.image_profile {
+  margin-top: 20px;
+}
+
+.position_line {
+  border: none;
+  border-top: 1.5px solid white;
+  margin: 4px 0;
+  width: 170px;
+}
+
+.header_box {
+  border-radius: 10px;
+  height: 166px;
+  /* min-height: 166px; */
+}

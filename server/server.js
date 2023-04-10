@@ -7,6 +7,7 @@ const mongoUri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${
 
 
 const language = require('./routes/api/language');
+const languageChinese = require('./routes/api/languageChinese');
 const candidate = require('./routes/api/candidate');
 const candidateChinese = require('./routes/api/candidateChinese');
 const skill = require('./routes/api/skill');
@@ -15,8 +16,10 @@ const course = require('./routes/api/course');
 const education = require('./routes/api/education');
 const educationChinese = require('./routes/api/educationChinese');
 const employment = require('./routes/api/employment');
+const employmentChinese = require('./routes/api/employmentChinese');
 
 const english = require('./routes/api/english');
+const chinese = require('./routes/api/chinese');
 
 const lock = require('./routes/api/lock');
 
@@ -27,6 +30,7 @@ app.use(express.json());
 
 
 app.use('/api/language', language);
+app.use('/api/languageChinese', languageChinese);
 app.use('/api/candidate', candidate);
 app.use('/api/candidateChinese', candidateChinese);
 app.use('/api/skill', skill);
@@ -35,7 +39,9 @@ app.use('/api/course', course);
 app.use('/api/education', education);
 app.use('/api/educationChinese', educationChinese);
 app.use('/api/employment', employment);
+app.use('/api/employmentChinese', employmentChinese);
 app.use('/api/english', english);
+app.use('/api/chinese', chinese);
 app.use('/api/lock', lock);
 
 const port = process.env.PORT || 3001;

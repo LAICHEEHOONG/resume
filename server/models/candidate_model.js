@@ -23,6 +23,10 @@ const candidateSchema = mongoose.Schema({
                 }
             }
         },
+        job: {
+            type: String,
+            trim: true
+        }, 
         phone: {
             type: String,
             trim: true
