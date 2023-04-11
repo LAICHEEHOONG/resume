@@ -13,19 +13,22 @@ const Language = () => {
   return (
     <List>
       <Typography
-        variant="h5"
+        variant="overline"
         style={{
           color: '#ce6464',
           fontWeight: 'bold',
           textDecoration: "underline",
           textDecorationColor: "#ce6464",
-          textUnderlineOffset: '0.5em',
+          textUnderlineOffset: '0.4em',
           paddingBottom: '10px',
+          fontSize: '1rem',
+      
         }}>
-          {
-            selectEnglish ? 'Speaking Ability': '语言 - 口语能力'
-          }
+        {
+          selectEnglish ? 'Speaking Ability' : '语言 - 口语能力'
+        }
       </Typography>
+      {/* <hr className="project_line" /> */}
 
       {selectLanguage.map((el, index) => (
         <div key={index}>
@@ -38,7 +41,7 @@ const Language = () => {
           </ListItem>
           <ListItem style={{ paddingLeft: 0 }} >
             <Box sx={{
-              width: '100%', 
+              width: '100%',
               "& .MuiLinearProgress-barColorPrimary": {
                 backgroundColor: "#ce6464"
               },

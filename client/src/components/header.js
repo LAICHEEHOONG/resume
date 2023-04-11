@@ -42,7 +42,7 @@ const Header = () => {
         <Grid item xs={9}>
           <Box display="flex" alignItems="center" bgcolor="#ce6464" p={1.5} className='header_box' >
             <Box flexGrow={1}>
-              <Typography variant="h5" color="white" style={{fontWeight: 'bolder'}} >
+              <Typography variant="overline" color="white" style={{fontWeight: 'bolder', fontSize: '1.1rem'}} >
                 {resume.name}
                 <Tooltip title={translate} placement='right' arrow >
                 <IconButton
