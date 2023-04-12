@@ -9,7 +9,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 
 
 
-const Project = (props) => {
+const Project = () => {
     const selectProject = useSelector(state => state.resume.project);
     let selectEnglish = useSelector(state => state.selectEnglish.selectEnglish);
 

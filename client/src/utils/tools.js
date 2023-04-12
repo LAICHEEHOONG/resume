@@ -15,7 +15,9 @@ export const resumePreprocess = (data) => {
             github: data.candidate[0].candidate.github,
             language: data.language,
             skill: data.skill,
-            project: data.project
+            project: data.project,
+            course: data.course,
+            education: data.education
         }
     }
     return obj;
@@ -32,9 +34,6 @@ export const formatDate = (dateString) => {
 export const paddingZero = () => ({
     padding: 0,  
 })
-
-
-
 
 export const contactIconSize = () => ({
     fontSize: '16px',
@@ -78,6 +77,21 @@ export const skillIcon = {
     webpack_icon: require('../icon/webpack_icon.png'),
     bootstrap_icon: require('../icon/bootstrap_icon.jpeg')
 }
+
+export const certificateUdemy = {
+    bootcamp: require('../certificate/bootcamp.jpg'),
+    git: require('../certificate/git.jpg'),
+    html_css: require('../certificate/html_css.jpg'),
+    javascript: require('../certificate/javascript.jpg'),
+    mysql: require('../certificate/mysql.jpg'),
+    react18: require('../certificate/react18.jpg'),
+    university: require('../certificate/辍学证书.jpg'),
+    school1: require('../certificate/高中毕业证书.jpg'),
+    school2: require('../certificate/统考.jpg')
+}
+
+
+
 
 export const truncateString = (str, maxLength) => {
     if (str.length > maxLength) {

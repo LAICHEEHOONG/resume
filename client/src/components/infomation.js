@@ -4,6 +4,8 @@ import ContactList from './contactList';
 import Language from './language';
 import Skill from './skill';
 import Project from './project';
+import Course from './course';
+import Education from './education';
 import { Grid } from '@mui/material';
 import { formatDate } from '../utils/tools';
 
@@ -30,6 +32,8 @@ const Infomation = () => {
                 </Grid>
                 <Grid item xs={9}>
                     <Project />
+                    <Course />
+                    <Education />
                 </Grid>
             </Grid>
         </div>
