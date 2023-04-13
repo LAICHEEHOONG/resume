@@ -17,7 +17,8 @@ export const resumePreprocess = (data) => {
             skill: data.skill,
             project: data.project,
             course: data.course,
-            education: data.education
+            education: data.education,
+            employment: data.employment
         }
     }
     return obj;
@@ -32,7 +33,7 @@ export const formatDate = (dateString) => {
 }
 
 export const paddingZero = () => ({
-    padding: 0,  
+    padding: 0,
 })
 
 export const contactIconSize = () => ({
@@ -96,7 +97,26 @@ export const certificateUdemy = {
 export const truncateString = (str, maxLength) => {
     if (str.length > maxLength) {
         return str.substring(0, maxLength - 3) + '...';
-      } else {
+    } else {
         return str;
-      }
+    }
+}
+
+export const insertHeaderIcon = (english) => {
+
+    const cuteEmoji = require('../icon/menchera.webp');
+    const head = document.querySelector('head');
+    let title ='Resume of Lai Chee Hoong';
+
+    if(english) {
+        title ='Resume of Lai Chee Hoong';
+    } else {
+        title = '赖志宏的简历';
+    }
+
+    head.insertAdjacentHTML('afterbegin', `
+    <link rel="icon" href="${cuteEmoji}" />
+    <link rel="apple-touch-icon" href="${cuteEmoji}" />
+    <title>${title}</title>
+    `)
 }

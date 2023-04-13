@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/header";
 import Infomation from "../components/infomation";
+import Footer from "../components/footer";
 
 
 const Home = () => {
@@ -19,9 +20,10 @@ const Home = () => {
     }, [lockStatus, navigate]);
 
     return (
-        <Container maxWidth='md'>  
-           <Header />
-           <Infomation />
+        <Container maxWidth='md'>
+            <Header />
+            <Infomation />
+            <Footer />
         </Container>
     )
 }

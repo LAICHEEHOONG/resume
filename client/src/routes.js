@@ -7,24 +7,24 @@ import { chineseData } from "./store/actions/chinese_action";
 import Loader from "./components/loader";
 import Home from "./pages/home";
 import FourOFour from "./pages/fourOfour";
-import './styles/index.css'
+import './styles/index.css';
+import { insertHeaderIcon } from "./utils/tools";
+
 
 
 
 const Router = () => {
 
-
     const dispatch = useDispatch();
     const lockStatus = useSelector(state => state.lock.lock_status);
     const loading = useSelector(state => state.loader.loader);
-    // console.log(loading)
+    let selectEnglish = useSelector(state => state.selectEnglish.selectEnglish);
+
 
     useEffect(() => {
         dispatch(checkLock());
-    }, [dispatch]);
-
-
-
+        insertHeaderIcon(selectEnglish);
+    }, [dispatch, selectEnglish]);
 
     if (!lockStatus) {
         dispatch(englishData());

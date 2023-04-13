@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { IconButton, Dialog, Fab, DialogActions, Tooltip } from '@mui/material';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import CloseIcon from '@mui/icons-material/Close';
@@ -6,6 +7,8 @@ import { certificateUdemy } from '../utils/tools'
 
 
 const ImageDialog = ({ image }) => {
+  
+  let selectEnglish = useSelector(state => state.selectEnglish.selectEnglish);
   const [open, setOpen] = useState(false);
   const handleClickOpen = () => {
     setOpen(true);
@@ -14,11 +17,9 @@ const ImageDialog = ({ image }) => {
     setOpen(false);
   };
 
-
-
   return (
     <>
-      <Tooltip title={'Certificate'} placement='right' arrow>
+      <Tooltip title={selectEnglish ? 'Certificate' : '证书'} placement='right' arrow>
         <IconButton
           onClick={handleClickOpen}
           style={{ marginTop: '-5px', color: '#ce6464' }} >

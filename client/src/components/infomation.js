@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from "react-redux";
+import React from 'react';
+import { useSelector } from "react-redux";
 import ContactList from './contactList';
 import Language from './language';
 import Skill from './skill';
 import Project from './project';
 import Course from './course';
 import Education from './education';
+import Employment from './employment';
 import { Grid } from '@mui/material';
 import { formatDate } from '../utils/tools';
 
@@ -34,6 +35,7 @@ const Infomation = () => {
                     <Project />
                     <Course />
                     <Education />
+                    <Employment />
                 </Grid>
             </Grid>
         </div>
