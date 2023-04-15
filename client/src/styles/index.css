@@ -33,6 +33,11 @@ code {
   height: 166px;
 }
 
+.header_mobile_box {
+  border-radius: 10px;
+  /* height: 166px; */
+}
+
 .project_line {
   border: none;
   height: 2px;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { switchLanguage } from '../store/actions/select_english_action';
 import { destructureResume } from '../store/actions/resume_action';
-import { Grid, Typography, Box, IconButton, Tooltip, Fab } from '@mui/material';
+import { Grid, Typography, Box, IconButton, Tooltip} from '@mui/material';
 import Picture from '../image/laicheehoong2.jpg';
 import TranslateIcon from '@mui/icons-material/Translate';
 import { resumePreprocess } from '../utils/tools';

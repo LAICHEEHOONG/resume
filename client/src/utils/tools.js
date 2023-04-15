@@ -42,6 +42,12 @@ export const contactIconSize = () => ({
     color: '#ce6464'
 })
 
+export const mobileContactIconSize = () => ({
+    // fontSize: '16px',
+    // marginTop: '5px',
+    color: '#ce6464'
+})
+
 export const contactTextSize = () => ({
     fontSize: '0.75rem',
 })
@@ -106,10 +112,10 @@ export const insertHeaderIcon = (english) => {
 
     const cuteEmoji = require('../icon/menchera.webp');
     const head = document.querySelector('head');
-    let title ='Resume of Lai Chee Hoong';
+    let title = 'Resume of Lai Chee Hoong';
 
-    if(english) {
-        title ='Resume of Lai Chee Hoong';
+    if (english) {
+        title = 'Resume of Lai Chee Hoong';
     } else {
         title = '赖志宏的简历';
     }
@@ -120,3 +126,10 @@ export const insertHeaderIcon = (english) => {
     <title>${title}</title>
     `)
 }
+
+export const getWindowDimensions = () => {
+    const { innerWidth } = window;
+    // console.log(innerWidth);
+    return innerWidth;
+}
+
