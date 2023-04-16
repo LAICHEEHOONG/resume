@@ -35,7 +35,7 @@ const MobileEducation = () => {
                     <ListItem key={`edu-${index}`} style={{ paddingTop: 0, paddingBottom: 0 }} >
                         <ListItemText style={{ margin: '2px' }}
                             primary={
-                                <Typography variant="overline" style={{ fontSize: '0.85rem' }}>
+                                <Typography variant="overline" style={{ fontSize: '0.78rem' }}>
                                     {el.education.school}
                                     <Tooltip title={el.education.website} placement='top' arrow >
                                         <IconButton onClick={() => openLink(el.education.website)} style={{ color: '#ce6464' }}>

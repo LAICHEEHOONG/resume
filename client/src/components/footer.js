@@ -12,46 +12,21 @@ function Footer() {
 
 
     return (
-        <Grid container style={{ color: 'gray' }}>
+        <Grid container>
             <Grid item xs={12}>
                 <List>
                     <ListItem>
-                        {/* <ListItemText
-                            primary={
-                                <>
-                                    {
-                                        selectEnglish ?
-                                            <Typography variant="body2" align="center">
-                                                © 2023 | Resume of LAI CHEE HOONG
-                                            </Typography>
-                                            :
-                                            <Typography variant="body2" align="center">
-                                                © 2023 | 赖志宏的简历
-                                            </Typography>
-                                    }
-
-                                </>
-                            }
-                        /> */}
                         <ListItemText
                             primary={
                                 <>
-                                    {
-                                        selectEnglish ?
-                                            <Typography variant="body2" align="center">
-                                                <Tooltip title={'https://github.com/LAICHEEHOONG/resume'} placement='top' arrow >
-                                                    <IconButton onClick={() => openLink('https://github.com/LAICHEEHOONG/resume')} >
-                                                        <GitHubIcon />
-                                                    </IconButton>
-                                                </Tooltip>
-                                                2023 | Resume of LAI CHEE HOONG
-                                            </Typography>
-                                            :
-                                            <Typography variant="body2" align="center">
-                                                © 2023 | 赖志宏的简历
-                                            </Typography>
-                                    }
-
+                                    <Typography variant="body2" align="center" style={{ color: '#ce6464' }}>
+                                        <Tooltip title={'https://github.com/LAICHEEHOONG/resume'} placement='top' arrow >
+                                            <IconButton style={{ marginBottom: '5px' }} onClick={() => openLink('https://github.com/LAICHEEHOONG/resume')} >
+                                                <GitHubIcon style={{ color: '#ce6464' }} />
+                                            </IconButton>
+                                        </Tooltip>
+                                        {selectEnglish ? '2023 | Resume of LAI CHEE HOONG' : '2023 | 赖志宏的简历'}
+                                    </Typography>
                                 </>
                             }
                         />

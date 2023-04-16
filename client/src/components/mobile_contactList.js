@@ -1,18 +1,19 @@
 import React from 'react';
-import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { List, ListItem, ListItemIcon, ListItemText, IconButton } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LanguageIcon from '@mui/icons-material/Language';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CakeIcon from '@mui/icons-material/Cake';
-import { paddingZero, contactIconSize, mobileContactIconSize, contactTextSize } from '../utils/tools';
+import { mobileContactIconSize } from '../utils/tools';
 
 
 
 const MobileContactList = ({ email, phone, city, website, github, birthday }) => {
-
-
+    const openLink = (url) => {
+        window.open(url, '_blank');
+    }
 
     return (
         <List>
@@ -47,19 +48,23 @@ const MobileContactList = ({ email, phone, city, website, github, birthday }) =>
 
             <ListItem>
                 <ListItemIcon>
-                    <LanguageIcon style={mobileContactIconSize()} />
+                    <IconButton style={{ marginLeft: '-8px' }} onClick={() => openLink(website)}>
+                        <LanguageIcon style={mobileContactIconSize()} />
+                    </IconButton>
                 </ListItemIcon>
                 <ListItemText primary={website} />
             </ListItem>
 
             <ListItem>
                 <ListItemIcon>
-                    <GitHubIcon style={mobileContactIconSize()} />
+                    <IconButton style={{ marginLeft: '-8px' }} onClick={() => openLink(github)}>
+                        <GitHubIcon style={mobileContactIconSize()} />
+                    </IconButton>
                 </ListItemIcon>
                 <ListItemText primary={github} primaryTypographyProps={{
-                    // whiteSpace: 'nowrap',
                     overflow: 'hidden',
-                    textOverflow: 'ellipsis'}} />
+                    textOverflow: 'ellipsis'
+                }} />
             </ListItem>
         </List>
     );
