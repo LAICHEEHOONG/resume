@@ -34,7 +34,7 @@ const MobileHeader = () => {
 
     return (
 
-        <div className='image_profile'>
+        <div className='image_profile' style={{marginBottom: '10px'}}>
             <Grid container justify="center" >
                 <Grid item xs={12}>
                     <Box display="flex" alignItems="center" bgcolor="#ce6464" p={1.5} className='header_mobile_box' >

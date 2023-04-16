@@ -9,6 +9,10 @@ import MobileSkill from './mobile_skill';
 import MobileContactList from './mobile_contactList';
 import MoblieLanguage from './mobile_language';
 import MobileProject from './mobile_project';
+import MobileCourse from './mobile_course';
+import MobileEducation from './mobile_education';
+import MobileEmployment from './mobile_employment';
+import Footer from './footer';
 import { formatDate } from '../utils/tools';
 
 export default function SimpleAccordion() {
@@ -123,6 +127,82 @@ export default function SimpleAccordion() {
                 </AccordionDetails>
             </Accordion>
 
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                >
+                    <Typography
+                        variant="overline"
+                        sx={{ pl: 2 }}
+                        style={{
+                            color: '#ce6464',
+                            fontWeight: 'bold',
+                            fontSize: '1.2rem',
+                        }}>
+                        {
+                            selectEnglish ? 'COURSES & TRAININGS' : '课程与培训'
+                        }
+
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <MobileCourse />
+                </AccordionDetails>
+            </Accordion>
+
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                >
+                    <Typography
+                        variant="overline"
+                        sx={{ pl: 2 }}
+                        style={{
+                            color: '#ce6464',
+                            fontWeight: 'bold',
+                            fontSize: '1.2rem',
+                        }}>
+                        {
+                            selectEnglish ? 'Education' : '教育背景'
+                        }
+
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <MobileEducation />
+                </AccordionDetails>
+            </Accordion>
+
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                >
+                    <Typography
+                        variant="overline"
+                        sx={{ pl: 2 }}
+                        style={{
+                            color: '#ce6464',
+                            fontWeight: 'bold',
+                            fontSize: '1.2rem',
+                        }}>
+                        {
+                            selectEnglish ? 'Employment History' : '工作经历'
+                        }
+
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <MobileEmployment />
+                </AccordionDetails>
+            </Accordion>
+
+            <Footer />
         </div>
     );
 }

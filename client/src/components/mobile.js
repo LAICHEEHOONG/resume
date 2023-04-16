@@ -13,7 +13,7 @@ const Mobile = () => {
 
     return (
         <>
-            <MobileHeader />
+            <MobileHeader/>
             {/* <Grid container >
                 <Grid item xs={12} sm={6} >
                     <MobileContactList

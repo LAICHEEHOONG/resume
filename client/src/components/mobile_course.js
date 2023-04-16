@@ -4,14 +4,14 @@ import { List, ListItem, ListItemText, Typography } from '@mui/material'
 import ImageDialog from './dialog';
 
 
-const Course = () => {
+const MobileCourse = () => {
     const selectCourse = useSelector(state => state.resume.course);
     let selectEnglish = useSelector(state => state.selectEnglish.selectEnglish);
 
 
     return (
         <List>
-            <Typography
+            {/* <Typography
                 variant="overline"
                 sx={{ pl: 2 }}
                 style={{
@@ -24,13 +24,13 @@ const Course = () => {
                 }
 
             </Typography>
-            <hr className="project_line" />
+            <hr className="project_line" /> */}
             {
                 selectCourse.map((el, index) => (
                     <ListItem key={`course${index}`} style={{ paddingTop: 0, paddingBottom: 0 }} >
                         <ListItemText style={{ margin: '2px' }}
                             primary={
-                                <Typography variant="overline" style={{ fontSize: '0.85rem' }}>
+                                <Typography variant="overline" style={{ fontSize: '0.7rem' }}>
                                     {el.course.course_name}
                                 </Typography>
                             }
@@ -54,6 +54,6 @@ const Course = () => {
     )
 }
 
-export default Course;
+export default MobileCourse;
 
 
