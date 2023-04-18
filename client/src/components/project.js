@@ -1,5 +1,5 @@
 import React from "react";
-import { List, ListItem, ListItemText, Typography, Link, IconButton, Tooltip } from "@mui/material";
+import { List, ListItem, ListItemText, Typography, IconButton, Tooltip } from "@mui/material";
 import { useSelector } from "react-redux";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -70,11 +70,9 @@ const Project = () => {
                                             </IconButton>
                                             :
                                             <Tooltip title={el.urls.youtube} placement='top' arrow >
-                                                <Link href={el.urls.youtube} target="_blank">
-                                                    <IconButton style={{ color: '#ce6464' }}>
-                                                        <YouTubeIcon />
-                                                    </IconButton>
-                                                </Link>
+                                                <IconButton onClick={() => openLink(el.urls.youtube)} style={{ color: '#ce6464' }}>
+                                                    <YouTubeIcon />
+                                                </IconButton>
                                             </Tooltip>
                                     }
                                     {el.urls.project_name}
