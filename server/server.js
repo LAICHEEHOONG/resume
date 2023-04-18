@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const mongoose = require('mongoose')
 
 require('dotenv').config();
@@ -43,6 +44,16 @@ app.use('/api/employmentChinese', employmentChinese);
 app.use('/api/english', english);
 app.use('/api/chinese', chinese);
 app.use('/api/lock', lock);
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, '/build/index.html'), function (err) {
+      if (err) {
+        res.status(404).sendFile(path.join(__dirname, '/view/index.html'));
+      }
+    });
+  })
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {

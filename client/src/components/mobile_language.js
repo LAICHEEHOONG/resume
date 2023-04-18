@@ -35,7 +35,7 @@ const MoblieLanguage = () => {
           <ListItem style={{}}>
             <ListItemText
               primary={el.language.language_type}
-              primaryTypographyProps={{ fontSize: '0.8rem', color: '#ce6464' }}
+              primaryTypographyProps={{ fontSize: '1rem', color: '#ce6464' }}
             />
           </ListItem>
           <ListItem style={{ paddingLeft: 0 }} >

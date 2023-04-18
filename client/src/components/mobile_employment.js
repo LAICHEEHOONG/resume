@@ -34,7 +34,7 @@ const MobileEmployment = () => {
                     <ListItem key={`eh-${index}`} style={{ paddingTop: 0, paddingBottom: 0 }} >
                         <ListItemText style={{ margin: '2px' }}
                             primary={
-                                <Typography variant="overline" style={{ fontSize: '0.85rem' }}>
+                                <Typography variant="overline" style={{ fontSize: '0.78rem' }}>
                                     {el.employment.company}
                                     <Tooltip title={el.employment.website} placement='top' arrow >
                                         <IconButton onClick={() => openLink(el.employment.website)} style={{ color: '#ce6464' }}>

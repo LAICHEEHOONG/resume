@@ -49,15 +49,11 @@ const Employment = () => {
                                     <Typography variant="caption" color="textSecondary" style={{ display: 'block' }}>
                                         {el.employment.position}
                                     </Typography>
-
-
                                     <Typography variant="caption" style={{ display: 'block' }}>
                                         {el.employment.location}
                                         <IconButton style={{ color: '#ce6464' }} disabled>
                                             <LocationOnIcon />
                                         </IconButton>
-
-
                                     </Typography>
                                     <Typography variant="caption" color="textSecondary" style={{ display: 'block' }}>
                                         {el.employment.year}

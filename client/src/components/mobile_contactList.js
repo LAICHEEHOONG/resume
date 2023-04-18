@@ -52,7 +52,13 @@ const MobileContactList = ({ email, phone, city, website, github, birthday }) =>
                         <LanguageIcon style={mobileContactIconSize()} />
                     </IconButton>
                 </ListItemIcon>
-                <ListItemText primary={website} />
+                <ListItemText
+                    primary={website}
+                    primaryTypographyProps={{
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'
+                    }}
+                />
             </ListItem>
 
             <ListItem>
@@ -61,10 +67,12 @@ const MobileContactList = ({ email, phone, city, website, github, birthday }) =>
                         <GitHubIcon style={mobileContactIconSize()} />
                     </IconButton>
                 </ListItemIcon>
-                <ListItemText primary={github} primaryTypographyProps={{
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis'
-                }} />
+                <ListItemText
+                    primary={github}
+                    primaryTypographyProps={{
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'
+                    }} />
             </ListItem>
         </List>
     );

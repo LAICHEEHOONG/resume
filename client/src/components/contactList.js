@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { List, ListItem, ListItemIcon, ListItemText, IconButton } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -11,7 +11,9 @@ import { paddingZero, contactIconSize, contactTextSize } from '../utils/tools';
 
 
 const ContactList = ({ email, phone, city, website, github, birthday }) => {
-
+    const openLink = (url) => {
+        window.open(url, '_blank');
+    }
 
 
     return (
@@ -62,7 +64,9 @@ const ContactList = ({ email, phone, city, website, github, birthday }) => {
 
             <ListItem style={paddingZero()}>
                 <ListItemIcon>
-                    <LanguageIcon style={contactIconSize()} />
+                    <IconButton style={{ marginLeft: '-8px' }} onClick={() => openLink(website)}>
+                        <LanguageIcon style={{ fontSize: '16px', color: '#ce6464' }} />
+                    </IconButton>
                 </ListItemIcon>
             </ListItem>
             <ListItem style={paddingZero()}>
@@ -73,7 +77,9 @@ const ContactList = ({ email, phone, city, website, github, birthday }) => {
 
             <ListItem style={paddingZero()}>
                 <ListItemIcon>
-                    <GitHubIcon style={contactIconSize()} />
+                    <IconButton style={{ marginLeft: '-8px' }} onClick={() => openLink(github)}>
+                        <GitHubIcon style={{ fontSize: '16px', color: '#ce6464' }} />
+                    </IconButton>
                 </ListItemIcon>
             </ListItem>
             <ListItem style={paddingZero()}>
@@ -83,7 +89,7 @@ const ContactList = ({ email, phone, city, website, github, birthday }) => {
                 />
             </ListItem>
 
-  
+
         </List>
     );
 };
