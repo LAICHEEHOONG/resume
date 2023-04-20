@@ -24,8 +24,8 @@ export default function SimpleAccordion() {
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2a-content"
-                    id="panel2a-header"
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
                 >
                     <Typography
                         variant="overline"
@@ -33,7 +33,7 @@ export default function SimpleAccordion() {
                         style={{
                             color: '#ce6464',
                             fontWeight: 'bold',
-                            fontSize: '1.2rem',
+                            fontSize: '1.1rem',
                         }}>
                         {
                             selectEnglish ? 'Contact Information' : '联系信息'
@@ -64,7 +64,7 @@ export default function SimpleAccordion() {
                         style={{
                             color: '#ce6464',
                             fontWeight: 'bold',
-                            fontSize: '1.2rem',
+                            fontSize: '1.1rem',
                         }}>
                         {
                             selectEnglish ? 'Speaking Ability' : '语言 - 口语能力'
@@ -81,8 +81,8 @@ export default function SimpleAccordion() {
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
+                    aria-controls="panel3a-content"
+                    id="panel3a-header"
                 >
                     <Typography
                         variant="overline"
@@ -90,7 +90,7 @@ export default function SimpleAccordion() {
                         style={{
                             color: '#ce6464',
                             fontWeight: 'bold',
-                            fontSize: '1.2rem',
+                            fontSize: '1.1rem',
                         }}>
                         {
                             selectEnglish ? 'Technical Skills' : '技术能力'
@@ -105,8 +105,8 @@ export default function SimpleAccordion() {
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2a-content"
-                    id="panel2a-header"
+                    aria-controls="panel4a-content"
+                    id="panel4a-header"
                 >
                     <Typography
                         variant="overline"
@@ -114,7 +114,7 @@ export default function SimpleAccordion() {
                         style={{
                             color: '#ce6464',
                             fontWeight: 'bold',
-                            fontSize: '1.2rem',
+                            fontSize: '1.1rem',
                         }}>
                         {
                             selectEnglish ? 'Personal Project' : '个人项目'
@@ -130,8 +130,8 @@ export default function SimpleAccordion() {
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2a-content"
-                    id="panel2a-header"
+                    aria-controls="panel5a-content"
+                    id="panel5a-header"
                 >
                     <Typography
                         variant="overline"
@@ -139,7 +139,7 @@ export default function SimpleAccordion() {
                         style={{
                             color: '#ce6464',
                             fontWeight: 'bold',
-                            fontSize: '1.2rem',
+                            fontSize: '1.1rem',
                         }}>
                         {
                             selectEnglish ? 'COURSES & TRAININGS' : '课程与培训'
@@ -155,8 +155,8 @@ export default function SimpleAccordion() {
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2a-content"
-                    id="panel2a-header"
+                    aria-controls="panel6a-content"
+                    id="panel6a-header"
                 >
                     <Typography
                         variant="overline"
@@ -164,7 +164,7 @@ export default function SimpleAccordion() {
                         style={{
                             color: '#ce6464',
                             fontWeight: 'bold',
-                            fontSize: '1.2rem',
+                            fontSize: '1.1rem',
                         }}>
                         {
                             selectEnglish ? 'Education' : '教育背景'
@@ -177,11 +177,11 @@ export default function SimpleAccordion() {
                 </AccordionDetails>
             </Accordion>
 
-            <Accordion>
+            <Accordion style={{ borderBottomLeftRadius: '4px', borderBottomRightRadius: '4px' }}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2a-content"
-                    id="panel2a-header"
+                    aria-controls="panel7a-content"
+                    id="panel7a-header"
                 >
                     <Typography
                         variant="overline"
@@ -189,7 +189,7 @@ export default function SimpleAccordion() {
                         style={{
                             color: '#ce6464',
                             fontWeight: 'bold',
-                            fontSize: '1.2rem',
+                            fontSize: '1.1rem',
                         }}>
                         {
                             selectEnglish ? 'Employment History' : '工作经历'
@@ -201,6 +201,7 @@ export default function SimpleAccordion() {
                     <MobileEmployment />
                 </AccordionDetails>
             </Accordion>
+
 
             <Footer />
         </div>

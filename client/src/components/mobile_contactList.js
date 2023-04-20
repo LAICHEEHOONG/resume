@@ -21,7 +21,13 @@ const MobileContactList = ({ email, phone, city, website, github, birthday }) =>
                 <ListItemIcon>
                     <EmailIcon style={mobileContactIconSize()} />
                 </ListItemIcon>
-                <ListItemText primary={email} />
+                <ListItemText
+                    primary={email}
+                    primaryTypographyProps={{
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'
+                    }}
+                />
             </ListItem>
 
             <ListItem>

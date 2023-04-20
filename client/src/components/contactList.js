@@ -19,8 +19,10 @@ const ContactList = ({ email, phone, city, website, github, birthday }) => {
     return (
         <List>
             <ListItem style={paddingZero()}>
-                <ListItemIcon >
-                    <EmailIcon style={contactIconSize()} />
+                <ListItemIcon>
+                    <IconButton style={{ marginLeft: '-8px' }} disabled >
+                        <EmailIcon style={{ fontSize: '16px', color: '#ce6464' }} />
+                    </IconButton>
                 </ListItemIcon>
             </ListItem>
             <ListItem style={paddingZero()} >
@@ -32,7 +34,9 @@ const ContactList = ({ email, phone, city, website, github, birthday }) => {
 
             <ListItem style={paddingZero()}>
                 <ListItemIcon>
-                    <PhoneIcon style={contactIconSize()} />
+                    <IconButton style={{ marginLeft: '-8px' }} disabled >
+                        <PhoneIcon style={{ fontSize: '16px', color: '#ce6464' }} />
+                    </IconButton>
                 </ListItemIcon>
             </ListItem>
             <ListItem style={paddingZero()}>
@@ -43,7 +47,9 @@ const ContactList = ({ email, phone, city, website, github, birthday }) => {
 
             <ListItem style={paddingZero()}>
                 <ListItemIcon>
-                    <LocationOnIcon style={contactIconSize()} />
+                    <IconButton style={{ marginLeft: '-8px' }} disabled >
+                        <LocationOnIcon style={{ fontSize: '16px', color: '#ce6464' }} />
+                    </IconButton>
                 </ListItemIcon>
             </ListItem>
             <ListItem style={paddingZero()}>
@@ -52,7 +58,9 @@ const ContactList = ({ email, phone, city, website, github, birthday }) => {
             </ListItem>
             <ListItem style={paddingZero()}>
                 <ListItemIcon>
-                    <CakeIcon style={contactIconSize()} />
+                    <IconButton style={{ marginLeft: '-8px' }} disabled >
+                        <CakeIcon style={{ fontSize: '16px', color: '#ce6464' }} />
+                    </IconButton>
                 </ListItemIcon>
             </ListItem>
             <ListItem style={paddingZero()}>
@@ -85,11 +93,8 @@ const ContactList = ({ email, phone, city, website, github, birthday }) => {
             <ListItem style={paddingZero()}>
                 <ListItemText primary={github}
                     primaryTypographyProps={{ fontSize: '0.7rem' }}
-
                 />
             </ListItem>
-
-
         </List>
     );
 };
