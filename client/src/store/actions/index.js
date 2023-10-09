@@ -1,4 +1,19 @@
-import { DATA_LOCK, DATA_ENGLISH, DATA_CHINESE, LOADER, SELECT_ENGLISH, DESTRUCTURE } from '../type';
+import { INFO, USER , PAGE , DATA_LOCK, DATA_ENGLISH, DATA_CHINESE, LOADER, SELECT_ENGLISH, DESTRUCTURE } from '../type';
+
+export const userData = (data) => ({
+    type: USER,
+    payload: data
+})
+
+export const infoData = (data) => ({
+    type: INFO,
+    payload: data
+});
+
+export const pageControl = (bool) => ({
+    type: PAGE,
+    payload: bool
+})
 
 export const checkLock = (status) => ({
     type: DATA_LOCK,
@@ -23,7 +38,7 @@ export const loader = (bool) => ({
 export const selectEnglish = (bool) => {
     let switchLanguage = bool;
 
-    if(bool) {
+    if (bool) {
         switchLanguage = false;
     } else {
         switchLanguage = true;

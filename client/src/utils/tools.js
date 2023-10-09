@@ -1,4 +1,54 @@
+import axios from 'axios';
 
+
+export const nameData = async () => {
+
+    try {
+        const staff = await axios.get('/api/info');
+        const data = staff.data;
+        console.log(data);
+     
+    } catch (error) {
+        console.error('Request chinese data error.', error);
+    }
+}
+
+
+
+
+
+export const addData = async (data) => {
+    try {
+        const user = await axios.post('/api/info', {
+            candidate: {
+                name: data.name,
+                contact: data.contact,
+                address: data.address,
+                birthday: data.birthday
+            }
+        });
+        console.log('submit', user.data);
+    } catch (error) {
+        console.log(error)
+    }
+    // const user = await axios.post('/api/info', {
+    //     candidate: {
+    //         name: 'laicheehoong',
+    //         contact: '0175337331',
+    //         address: '102 rimba',
+    //         birthday: '1990/04/17'
+    //     }
+    // });
+    // console.log('click', user.data);
+    // return async (dispatch, getState) => {
+    //     try {
+    //         const user = await axios.post('/api/info', { candidate: {name: 'lai'}});
+    //         console.log('click', user);
+    //     } catch (error) {
+    //         console.log('User add data failed')
+    //     }
+    // }
+}
 
 export const resumePreprocess = (data) => {
     let obj = {};
