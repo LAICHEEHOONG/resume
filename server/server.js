@@ -4,8 +4,8 @@ const path = require('path');
 const mongoose = require('mongoose')
 
 require('dotenv').config();
-// const mongoUri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_COLLECTION}?retryWrites=true&w=majority`;
-const mongoUri  = `mongodb+srv://laicheehoong:0175337331@cluster0.f7ei8yj.mongodb.net/?retryWrites=true&w=majority`;
+const mongoUri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_COLLECTION}?retryWrites=true&w=majority`;
+
 
 const language = require('./routes/api/language');
 const languageChinese = require('./routes/api/languageChinese');
@@ -18,8 +18,6 @@ const education = require('./routes/api/education');
 const educationChinese = require('./routes/api/educationChinese');
 const employment = require('./routes/api/employment');
 const employmentChinese = require('./routes/api/employmentChinese');
-
-const info = require('./routes/api/info')
 
 const english = require('./routes/api/english');
 const chinese = require('./routes/api/chinese');
@@ -46,8 +44,6 @@ app.use('/api/employmentChinese', employmentChinese);
 app.use('/api/english', english);
 app.use('/api/chinese', chinese);
 app.use('/api/lock', lock);
-
-app.use('/api/info', info);
 
 app.use(express.static(path.join(__dirname, 'build')));
 

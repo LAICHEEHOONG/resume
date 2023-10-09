@@ -4,6 +4,3 @@ export const DATA_CHINESE = 'data_chinese';
 export const LOADER = 'loader';
 export const SELECT_ENGLISH = 'select_english';
 export const DESTRUCTURE = 'destructure';
-export const INFO = 'info';
-export const PAGE = 'page';
-export const USER = 'user';
